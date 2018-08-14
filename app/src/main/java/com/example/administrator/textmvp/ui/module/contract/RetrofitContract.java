@@ -11,5 +11,6 @@ public class RetrofitContract {
 public interface  View extends BaseView{}
 
     public interface Presenter {
+    void  getlist();
     }
 }
