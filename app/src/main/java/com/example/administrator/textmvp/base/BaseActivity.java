@@ -56,6 +56,15 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         super.onDestroy();
         presenter.decath();
     }
+
+    /**
+     *
+     * @param containerId   显示的layout 的id
+     * @param fragmentClass   继承BaseFragment的fragment
+     * @param bundle           传值是的bundle对象
+     * @param isReplace        是替换还是隐藏（true则替换 false则隐藏显示）
+     * @param isBack              是否添加回退栈
+     */
     public void changeFragment(int containerId, Class<? extends BaseFragment> fragmentClass, Bundle bundle,boolean isReplace,boolean isBack){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
